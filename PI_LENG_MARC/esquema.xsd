@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://w3.org">
+
+    <xs:element name="autoescuela">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alumno" maxOccurs="15">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="datos_personales">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="apellidos" type="xs:string"/>
+                                        <xs:element name="dni">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[0-9]{8}[A-Z]"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="email" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="estado">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Inscrito"/>
+                                        <xs:enumeration value="Teorico aprobado"/>
+                                        <xs:enumeration value="Practicas"/>
+                                        <xs:enumeration value="Aprobado"/>
+                                        <xs:enumeration value="Baja"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="historial_clases">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="clase" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="fecha_hora" type="xs:dateTime"/>
+                                                    <xs:element name="tipo" type="xs:string"/>
+                                                    <xs:element name="duracion" type="xs:integer"/>
+                                                    <xs:element name="profesor_dni" type="xs:string"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="id_clase" type="xs:integer" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
