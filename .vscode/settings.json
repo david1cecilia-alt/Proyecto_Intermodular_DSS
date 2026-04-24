@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "PI_PROGRAMACION/conexbbd/lib/mysql-connector-j-9.6.0.jar"
+    ]
+}
