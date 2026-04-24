@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autoescuela xmlns:xsi="http://w3.org" xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <alumno id="1">
+        <datos_personales>
+            <nombre>Juan</nombre><apellidos>García Pérez</apellidos>
+            <dni>12345678Z</dni><email>juan.garcia@email.com</email>
+        </datos_personales>
+        <estado>Practicas</estado>
+        <historial_clases>
+            <clase id_clase="101">
+                <fecha_hora>2024-03-15T10:00:00</fecha_hora>
+                <tipo>Circulación</tipo><duracion>45</duracion><profesor_dni>44556677L</profesor_dni>
+            </clase>
+        </historial_clases>
+    </alumno>
+    <alumno id="2">
+        <datos_personales>
+            <nombre>María</nombre><apellidos>López Iturbe</apellidos>
+            <dni>87654321Q</dni><email>m.lopez@email.com</email>
+        </datos_personales>
+        <estado>Teorico aprobado</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="3">
+        <datos_personales>
+            <nombre>Carlos</nombre><apellidos>Ruiz Martínez</apellidos>
+            <dni>11223344K</dni><email>carlos.ruiz@hotmail.com</email>
+        </datos_personales>
+        <estado>Inscrito</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="4">
+        <datos_personales>
+            <nombre>Ana</nombre><apellidos>Beltrán Sanz</apellidos>
+            <dni>55667788M</dni><email>ana.beltran@gmail.com</email>
+        </datos_personales>
+        <estado>Aprobado</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="5">
+        <datos_personales>
+            <nombre>Diego</nombre><apellidos>Sánchez Vila</apellidos>
+            <dni>99887766P</dni><email>diego.sv@email.com</email>
+        </datos_personales>
+        <estado>Practicas</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="6">
+        <datos_personales>
+            <nombre>Lucía</nombre><apellidos>Gómez Fer</apellidos>
+            <dni>22334455X</dni><email>lucia.gomez@email.com</email>
+        </datos_personales>
+        <estado>Baja</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="7">
+        <datos_personales>
+            <nombre>Sergio</nombre><apellidos>Ramos Ortiz</apellidos>
+            <dni>77889900B</dni><email>s.ramos@auto.es</email>
+        </datos_personales>
+        <estado>Teorico aprobado</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="8">
+        <datos_personales>
+            <nombre>Elena</nombre><apellidos>Cano Ruiz</apellidos>
+            <dni>66554433D</dni><email>elena.cano@email.com</email>
+        </datos_personales>
+        <estado>Practicas</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="9">
+        <datos_personales>
+            <nombre>Javier</nombre><apellidos>Mora Soler</apellidos>
+            <dni>55443322F</dni><email>javi.mora@email.com</email>
+        </datos_personales>
+        <estado>Inscrito</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="10">
+        <datos_personales>
+            <nombre>Sara</nombre><apellidos>Leal Montes</apellidos>
+            <dni>11992288G</dni><email>sara.leal@email.com</email>
+        </datos_personales>
+        <estado>Practicas</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="11">
+        <datos_personales>
+            <nombre>Roberto</nombre><apellidos>Pousa Gil</apellidos>
+            <dni>33445566H</dni><email>roberto.pg@email.com</email>
+        </datos_personales>
+        <estado>Teorico aprobado</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="12">
+        <datos_personales>
+            <nombre>Marta</nombre><apellidos>Ibáñez Tor</apellidos>
+            <dni>99001122J</dni><email>marta.it@email.com</email>
+        </datos_personales>
+        <estado>Aprobado</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="13">
+        <datos_personales>
+            <nombre>Hugo</nombre><apellidos>Díaz Campos</apellidos>
+            <dni>88772233R</dni><email>hugo.dc@email.com</email>
+        </datos_personales>
+        <estado>Inscrito</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="14">
+        <datos_personales>
+            <nombre>Paula</nombre><apellidos>Sosa Real</apellidos>
+            <dni>77665544T</dni><email>paula.sosa@email.com</email>
+        </datos_personales>
+        <estado>Practicas</estado>
+        <historial_clases/>
+    </alumno>
+    <alumno id="15">
+        <datos_personales>
+            <nombre>Iker</nombre><apellidos>Jiménez Casado</apellidos>
+            <dni>11224455V</dni><email>iker.jc@email.com</email>
+        </datos_personales>
+        <estado>Teorico aprobado</estado>
+        <historial_clases/>
+    </alumno>
+</autoescuela>

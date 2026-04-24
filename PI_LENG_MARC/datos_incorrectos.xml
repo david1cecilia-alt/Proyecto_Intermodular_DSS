@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autoescuela xmlns:xsi="http://w3.org" xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <alumno id="ERR-01"> <!-- ERROR 1: El ID debe ser un entero, no texto -->
+        <datos_personales>
+            <nombre>Pedro</nombre>
+            <apellidos>Error Test</apellidos>
+            <dni>123A</dni> <!-- ERROR 2: El DNI no cumple el patrón (faltan números) -->
+            <email>test@error.com</email>
+        </datos_personales>
+        <estado>Graduado</estado> <!-- ERROR 3: "Graduado" no está en el ENUM del XSD -->
+        <historial_clases>
+            <clase id_clase="X"> <!-- ERROR 4: El id_clase debe ser entero -->
+                <fecha_hora>Hoy a las 5</fecha_hora> <!-- ERROR 5: No es formato dateTime (YYYY-MM-DDThh:mm:ss) -->
+                <tipo>Clase Error</tipo>
+                <duracion>Mucho</duracion> <!-- ERROR 6: Debe ser entero -->
+                <profesor_dni>999</profesor_dni>
+            </clase>
+        </historial_clases>
+    </alumno>
+</autoescuela>
