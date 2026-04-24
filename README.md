@@ -1,2 +1,12 @@
 # Proyecto_Intermodular_DSS
 Proyecto sobre Autoescuelas Rápido. David Cecilia Sergio Lastras y Sergio Salido.
+
+Autoescuelas Rápido es un proyecto desarrollado por David Cecilia, Sergio Salido y Sergio Lastras. Se trata de una aplicación de consola creada en Java cuyo objetivo es simular la gestión de una autoescuela mediante el uso de una base de datos relacional.
+
+La aplicación permite organizar la información y las operaciones de una autoescuela diferenciando entre varios tipos de usuarios. Cada usuario accede al sistema mediante autenticación, utilizando DNI y contraseña en el caso de alumnos y profesores, y un nombre de usuario específico en el caso del administrador. Una vez dentro, el sistema muestra un menú jerárquico adaptado al perfil, de manera que cada usuario puede consultar y gestionar únicamente la información que le corresponde. De este modo, el alumno puede acceder a sus propios datos, el profesor a los suyos y a los de los alumnos, y el administrador dispone de control total sobre el sistema.
+
+El propósito principal de la aplicación es facilitar la gestión de datos relacionados con la autoescuela, permitiendo realizar consultas, inserciones y eliminaciones de información de forma estructurada. Esto proporciona un entorno que simula un caso real, mejorando la organización de los datos y el control de accesos según el rol del usuario.
+
+En cuanto a la estructura, el proyecto está desarrollado en Java y se conecta a una base de datos MySQL mediante JDBC. El código se organiza dentro de la carpeta principal “src”, donde se separan la aplicación principal, las clases de métodos y las clases que representan las entidades de la base de datos. Las clases 'DAO' gestionan la interacción con la base de datos, permitiendo reflejar en el sistema los cambios realizados y las clases 'VO' se encargan de definir las variables registradas en la base de datos.
+
+Además, el proyecto incluye una parte desarrollada en el módulo de Lenguajes de Marcas, centrada en la gestión de información estructurada mediante XML. Se ha diseñado un archivo XML que representa datos reales de la aplicación, junto con su correspondiente esquema XSD para validar su estructura, tipos de datos y restricciones. La validación se ha comprobado correctamente con un JavaScript y esta funcionalidad se integra con el resto del sistema como una forma de representar, intercambiar o documentar la información de la base de datos.
