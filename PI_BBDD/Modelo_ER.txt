@@ -1,0 +1,117 @@
+Autoescuela
+Autoescuela(PK id_autoescuela, nombre, cif (U), direccion, telefono)
+
+----------------------------------------------------------------------------------------
+
+Profesores
+Profesores(PK id_profesor, nombre, apellidos, dni (U), telefono,
+  FK id_autoescuela → Autoescuela)
+
+Restricciones:
+Un profesor no puede impartir dos clases al mismo tiempo.
+No puede haber solapamiento de clases asignadas al mismo profesor.
+
+----------------------------------------------------------------------------------------
+
+Vehiculos
+Vehiculos(PK id_vehiculo, matricula (U), modelo, marca,
+  FK id_profesor_asignado → Profesores,
+  FK id_autoescuela → Autoescuela)
+
+Restricciones:
+Un vehículo no puede estar asignado a más de una clase en el mismo intervalo de tiempo.
+Debe garantizarse la disponibilidad exclusiva del vehículo en cada clase.
+
+----------------------------------------------------------------------------------------
+
+Alumnos
+Alumnos(PK id_alumno, nombre, apellidos, dni (U), fecha_nacimiento, telefono, email, estado,
+  FK id_profesor_tutor → Profesores,
+  FK id_autoescuela → Autoescuela)
+
+Restricciones:
+estado debe ser {Inscrito, Teorico aprobado, Practicas, Aprobado, Baja}
+
+Restricciones:
+Un alumno no puede tener dos clases programadas al mismo tiempo.
+Se debe evitar cualquier solapamiento de sesiones.
+
+----------------------------------------------------------------------------------------
+
+TipoDeClase
+TipoDeClase(PK id_tipo_clase, nombre_clase, precio_hora)
+
+Restricciones:
+precio_hora > 0
+
+----------------------------------------------------------------------------------------
+
+Bonos
+Bonos(PK id_bono, clases_totales, clases_restantes, fecha_compra,
+  FK id_alumno → Alumnos)
+
+Restricciones:
+clases_totales > 0
+clases_restantes ≥ 0
+clases_restantes ≤ clases_totales
+
+Una clase solo puede asociarse a un bono perteneciente al mismo alumno.
+No se pueden consumir más clases de las que tenga disponibles el bono.
+
+----------------------------------------------------------------------------------------
+
+Clases
+Clases(PK id_clase, fecha_hora, duracion_minutos,
+  FK id_alumno → Alumnos,
+  FK id_profesor → Profesores,
+  FK id_vehiculo → Vehiculos,
+  FK id_tipo_clase → TipoDeClase,
+  FK id_bono → Bonos)
+
+Restricciones:
+duracion_minutos > 0
+
+----------------------------------------------------------------------------------------
+
+Pagos
+Pagos(PK id_pago, fecha_pago, importe, metodo,
+  FK id_alumno → Alumnos)
+
+Restricciones:
+importe > 0
+metodo debe ser {Efectivo, Tarjeta, Transferencia}
+
+Todo pago debe estar asociado a un alumno existente en la base de datos.
+El importe del pago debe ser siempre mayor que cero.
+
+----------------------------------------------------------------------------------------
+
+Disponibilidad
+Disponibilidad(PK id_disponibilidad, fecha_hora_inicio, fecha_hora_fin,
+  FK id_profesor → Profesores)
+
+Restricciones:
+fecha_hora_inicio < fecha_hora_fin
+
+No se permite el solapamiento de franjas de disponibilidad para un mismo profesor.
+Las clases deben programarse obligatoriamente dentro del horario de disponibilidad del profesor.
+
+----------------------------------------------------------------------------------------
+
+TipoExamen
+TipoExamen(PK id_tipo_examen, descripcion)
+
+----------------------------------------------------------------------------------------
+Examen
+Examen(PK id_examen, fecha_examen, intento, resultado,
+  FK id_alumno → Alumnos,
+  FK id_tipo_examen → TipoExamen)
+
+Restricciones:
+intento > 0
+resultado debe ser {Apto, No Apto, Pendiente}
+
+Un alumno puede realizar varios intentos del mismo tipo de examen,
+pero estos deben registrarse de forma ordenada y secuencial por intento.
+
+----------------------------------------------------------------------------------------
