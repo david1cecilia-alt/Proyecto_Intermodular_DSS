@@ -1,0 +1,9 @@
+Este proyecto consiste en una aplicación de consola desarrollada en Java que permite gestionar el funcionamiento básico de una autoescuela. La idea principal es simular un entorno real en el que se puedan manejar datos como alumnos, profesores, vehículos, clases y exámenes, todo conectado a una base de datos.
+
+La aplicación permite realizar acciones útiles como dar de alta alumnos, gestionar su progreso, asignar profesores y vehículos, planificar clases prácticas según disponibilidad y registrar resultados de exámenes. También incluye un sistema de inicio de sesión que muestra un menú diferente según el tipo de usuario, lo que hace que cada uno solo pueda acceder a la información que le corresponde.
+
+Para funcionar, el programa se conecta a una base de datos MySQL llamada BDAUTOESCUELA utilizando JDBC. A través de esta conexión, se pueden hacer operaciones reales como añadir, consultar, modificar o eliminar datos, de forma que la aplicación no trabaja con datos inventados, sino directamente con la base de datos.
+
+El código está organizado en varias partes para que sea más claro. Por un lado están las clases que representan los datos, por otro las que se encargan de hacer las consultas a la base de datos, y finalmente la parte principal que controla el funcionamiento del programa y los menús.
+
+La aplicación se ejecuta desde consola y necesita que la base de datos esté creada previamente. Al iniciarse, pide las credenciales al usuario y, si son correctas, permite acceder a las distintas opciones del sistema. Durante el desarrollo se han utilizado estructuras básicas de programación como condicionales, bucles y métodos, además de manejo de errores para evitar que el programa falle.
